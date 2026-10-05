@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{db}/documents {
+    function coord() { return request.auth != null && request.auth.token.email == "YOUR_COORDINATOR_EMAIL"; }
+    match /members/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid || coord();
+      allow write: if request.auth != null && request.auth.uid == uid;
+    }
+    match /matches/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid || coord();
+      allow write: if coord();
+    }
+  }
+}
