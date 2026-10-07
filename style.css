@@ -108,3 +108,44 @@ h1{letter-spacing:-.03em}
 .rail .net{right:-120px;bottom:-160px;width:680px}
 .chap{max-width:880px;margin:0 auto;padding:72px 22px 20px}
 @media(max-width:700px){.rail-in{padding:64px 22px 72px}.rail .net{width:460px;right:-170px;bottom:-110px}}
+
+/* ===== Mobile & tablet polish ===== */
+.cta{padding:40px 32px}
+.chap section.cta{padding:40px 32px;margin-bottom:40px}
+.card{overflow-wrap:anywhere}
+button,.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.nv>a{white-space:nowrap}
+@media(max-width:700px){
+  .w{padding-left:18px;padding-right:18px}
+  .nv{gap:10px}
+  .nv>a{font-size:15px}
+  .nv .btn{padding:8px 14px;font-size:13px;min-height:38px;white-space:nowrap}
+  .rail .net{opacity:.22}
+  .rail h1{font-size:clamp(36px,11vw,52px)}
+  .rail .big{font-size:17px}
+  .rail .btn.big{width:100%}
+  .chap{padding:36px 18px 0}
+  .chap section{padding-bottom:40px;margin-bottom:36px}
+  .chap section.cta{padding:32px 22px;border-radius:20px}
+  .cta .btn.big{width:100%}
+  .rung{grid-template-columns:104px 1fr;gap:14px}
+  .ladder::before{left:52px}
+  .duo>div{padding:22px 20px}
+  .card{padding:18px}
+  .row{flex-direction:column;align-items:stretch}
+  .row select{min-width:100%}
+  .row button{width:100%}
+  .seg button{padding:11px 10px}
+  h2{font-size:24px}
+  .stats b{font-size:24px}
+}
+@media(max-width:380px){
+  .nv>a{font-size:13.5px}
+  .nv .btn{padding:7px 11px;font-size:12px}
+}
+.nv>span{display:flex;align-items:center;gap:14px}
+#navCoord{margin-right:0!important;white-space:nowrap}
+@media(max-width:520px){
+  .nv>span:has(#navCoord:not([hidden])) .btn{display:none}
+  .row select{font-size:15px}
+}
